@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../statics/css/output/tw_output.css">
     <link rel="icon" href="../statics/img/PCEAschool.png" type="image/icon type">
+    <!-- AOS CSS -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    rel="stylesheet"
+    />
+
+
+
+
 
     <title>About - PCEA Umoja Academy-Nairobi</title>
 
@@ -32,11 +41,22 @@
             to { transform: scale(1); }
         }
     </style>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+        duration: 700,
+        easing: 'ease-out-cubic',
+        once: true,
+        offset: 120
+        });
+    </script>
  
 
 
 </head>
-<body class="font-sans">
+<body class="font-sans bg-gradient-to-br from-blue-500 via-red-200 to-blue-500">
 
     <a href="https://wa.me/+2540705388810" target="_blank" 
         class="fixed bottom-4 right-4 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all">
@@ -46,436 +66,656 @@
     </a>
 
     
-    <header class="sticky top-0 z-50 bg-white border-b-4 border-red-500 dark:border-gray-700">
-        <nav class="bg-gray-100 border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
-            <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-                <a href="#" class="flex items-center justify-between w-vw">
-                    <img src="../statics/img/PCEAschool.png" class="w-14" alt="PCEA logo">
-                    <span class="self-center ml-5 md:text-2xl  text-blue-800 font-semibold whitespace-nowrap uppercase dark:text-white">PCEA Umoja Academy-Nairobi</span>
-                </a>
-                <div class="flex items-center lg:order-2">
-                    <!-- <a href="#" class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">Log in</a> -->
-                    <a href="enrol.html" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-lg px-5 lg:px-3 py-2 lg:py-1 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Enroll Today</a>
-                    <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-lg text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
-                        <span class="sr-only">Open main menu</span>
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-                        <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                    </button>
-                </div>
-                <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
-                    <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
-                        <li>
-                            <a href="index.html" class="block py-2 pr-4 pl-3 text-gray-700 text-lg border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Home</a>
-                        </li>
-                        <li>
-                            <a href="about.html" class="block py-2 active:text-red-500 pr-4 pl-3 text-lg text-red-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">About</a>
-                        </li>
-                        <li>
-                            <a href="contact.html" class="block py-2 pr-4 pl-3 text-lg text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
-                        </li>
-                        <li>
-                            <a href="academics.html" class="block py-2 pr-4 pl-3 text-gray-700 text-lg border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Academics</a>
-                        </li>
-                        <li>
-                            <a href="events.html" class="block py-2 pr-4 pl-3 text-gray-700 text-lg border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Events</a>
-                        </li>
-
-                        <li>
-                            <a href="gallary.html" class="block py-2 pr-4 pl-3 text-gray-700 text-lg border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Gallery</a>
-                        </li>
-
-                        <li>
-                            <a href="staff.html" class="block py-2 active:text-red-500 pr-4 pl-3 text-lg text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Staff</a>
-                        </li>
-
-                        
-                       
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-
-
-    <section class="bg-gray-500 ">
-
-        <div class="relative bg-cover bg-center h-[400px]" style="background-image: url('../statics/img/stuff/smem.jpg')">
-            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-              <div class="text-center text-white">
-                <h1 class="text-4xl font-bold pb-4">PCEA About</h1>
-                <div class="mt-4 inline-block bg-gray-600 hover:bg-gray-700 text-white font-semibold py-5 px-6 rounded">
-                  PCEA UMOJA | About
-                </div>
+    <header class="sticky top-0 z-50 bg-white shadow-md border-b border-red-500/50">
+        <div class="max-w-screen-xl mx-auto flex items-center justify-between px-4 py-3 lg:py-4">
+          <!-- Logo -->
+          <a href="index.html" class="flex items-center">
+            <img src="../statics/img/PCEAschool.png" class="w-14" alt="PCEA logo" />
+            <span class="ml-4 text-sm md:text-lg lg:text-xl font-extrabold text-red-800 uppercase">
+              PCEA Umoja Academy-Nairobi
+            </span>
+          </a>
+    
+          <!-- Desktop Menu (show ≥md) -->
+          <nav class="hidden md:flex space-x-8 items-center">
+            <a href="index.html" class="text-gray-700 hover:text-blue-700">Home</a>
+            <a href="index.html" class="text-blue-800 text-lg font-bold hover:text-blue-700">About</a>
+            <a href="contact.html" class="text-gray-700 hover:text-blue-700" >Contact</a>
+            <a href="academics.html" class="text-gray-700 hover:text-blue-700">Academics</a>
+    
+            <!-- Gallery Dropdown -->
+            <div class="relative group">
+              <button class="flex items-center text-gray-700 hover:text-blue-700 focus:outline-none">
+                Gallery
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 9l-7 7-7-7"/>
+                </svg>
+              </button>
+              <div
+                class="dropdown-menu absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg py-2 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 z-50">
+                <a href="gallery.html" class="block px-4 py-2 hover:bg-gray-100">Gallery</a>
+                <a href="staff.html" class="block px-4 py-2 hover:bg-gray-100">Staff</a>
+                <a href="trip.html" class="block px-4 py-2 hover:bg-gray-100">Trips</a>
+                <a href="service.html" class="block px-4 py-2 hover:bg-gray-100">Service</a>
               </div>
             </div>
-          </div>
-          
-
-    </section>
-
-
-
     
-    <section class="bg-blue-100 lg:py-10">
-        <div class="flex justify-center items-center p-6">
-            <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-6xl">
-                <div class="bg-brightRed text-white text-center py-2 rounded-lg mb-6">
-                    <h2 class="text-xl font-bold">Our Core VAlues</h2>
-                </div>
-                <ul class="list-inside grid grid-cols-2 gap-3">
-                    <li>
-                        <i class="fas fa-check text-sm text-green-500 mr-2"></i>Tolerance
-                    </li>
-                    <li>
-                        <i class="fas fa-check text-sm text-green-500 mr-2"></i>Hardwork
-                    </li>
-                    <li>
-                        <i class="fas fa-check text-sm text-green-500 mr-2"></i>Respect
-                    </li>
-                    <li>
-                        <i class="fas fa-check text-sm text-green-500 mr-2"></i>Integrity
-                    </li>
-                    <li>
-                        <i class="fas fa-check text-sm text-green-500 mr-2"></i>Sacrifice
-                    </li>
-                    <li>
-                        <i class="fas fa-check text-sm text-green-500 mr-2"></i>Excellence
-                    </li>
-                    <li>
-                        <i class="fas fa-check text-sm text-green-500 mr-2"></i>Layalty
-                    </li>
-                    <li>
-                        <i class="fas fa-check text-sm text-green-500 mr-2"></i>Trust in God
-                    </li>
-                    <li>
-                        <i class="fas fa-check text-sm text-green-500 mr-2"></i>Diversity
-                    </li>
-                </ul>
+            <!-- Resources Dropdown -->
+            <div class="relative group">
+              <button class="flex items-center text-gray-700 hover:text-blue-700 focus:outline-none">
+                Resources
+                <svg class="w-4 h-4 ml-1 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 9l-7 7-7-7"/>
+                </svg>
+              </button>
+              <div
+                class="dropdown-menu absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg py-2 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 z-50">
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Academic Calendar</a>
+                <a href="events.html" class="block px-4 py-2 hover:bg-gray-100">Events</a>
+              </div>
             </div>
-        </div>
-    </section>
-
-
-
-
-    <section class="">
-        <div class="py-16 bg-white">
-            <div class="max-w-6xl mx-auto px-6">
-                <!-- Title Section -->
-                <div class="text-center mb-12">
-                    <h2 class="text-xl font-bold text-orange-600 uppercase tracking-wide mb-2"> Our Mission, Vision and Motto</h2>
-                    <hr class="border-b-1 border-orange-600 mx-auto">
-                </div>
-                <!-- Features Section -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Academics -->
-                    <div id="mission" class="flex flex-col items-center text-center p-2 hover:bg-orange-200">
-                        <div class="w-16 h-16 rounded-full bg-gray-100 flex justify-center items-center mb-4">
-                            <i class="fas fa-book text-2xl text-red-700"></i>
-                        </div>
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Mission</h3>
-                        <p class="text-gray-600">
-                            PCEA Umoja Academy is a religous based academic ceneter that fosters for academic excellence while embracing Christian values.
-                        </p>
-                    </div>
-                    <!-- Students' Life -->
-                    <div class="flex flex-col items-center text-center p-2 hover:bg-orange-200">
-                        <div class="w-16 h-16 rounded-full bg-gray-100 flex justify-center items-center mb-4">
-                            <i class="fas fa-rocket text-2xl text-red-700"></i>
-                        </div>
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Vission</h3>
-                        <p class="text-gray-600">
-                            We strive to prepare learners to become lifelong persons and responsible citizens ready to participate in and contribute to the global world now and future.
-
-                        </p>
-                    </div>
-                    <!-- Admission Process -->
-                    <div class="flex flex-col items-center text-center p-2 hover:bg-orange-200">
-                        <div class="w-16 h-16 rounded-full bg-gray-100 flex justify-center items-center mb-4">
-                            <i class="fas fa-fire text-2xl text-red-700"></i>
-                        </div>
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Motto</h3>
-                        <p class="text-gray-600">
-                            Nurturing based on Christian tenets.
-
-
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-   
-    <section class="bg-blue-100 lg:py-10">
-        <div class="flex  justify-center items-center p-6">
-            <div class="bg-gray-50 px-4 py-6 rounded-lg shadow-lg w-full max-w-6xl">
-                <div class=" text-pink-800 text-center py-2 rounded-lg mb-6">
-                    <h2 class="text-2xl font-bold">PCEA Academy Brief History</h2>
-                    <hr class="mx-auto border-1 mt-2 border-pink-800">
-                </div>
-                <div class="hover:bg-red-200 p-4 pt8 border-b-2 border-red-200">
-                    <h2 class="text-blue-800 uppercase">Preamble</h2>
-                    <hr class="border-b-2 border-red-800 w-8 font-bold">
-                    <p id="pre" class="pt-3">
-                        PCEA Umoja Academy-Nairobi, just like many organizations, started in a very humble beginning. The idea was born from the Women's Guild and Christian Education departments of the church.
-                    </p>
-                </div>
-                <div class="hover:bg-red-200 p-4 pt-10 border-b-2 border-red-200">
-                    <h2 class="text-blue-800 uppercase">beginning</h2>
-                    <hr class="border-b-2 border-red-800 w-8 font-bold">
-                    <p class="pt-3">
-                        The academy opened its doors in January 2007 with two children, Abigael Muthoni and Fredrick Ayuku, and one teacher, Priscilla Mugo, assisted by Jane Wanjiku in charge of welfare. Both are still with the academy to date. In Term Two of 2007, the enrolment increased to 43.
-                    </p>
-                </div>
-                <div class="hover:bg-red-200 p-4 pt-10 border-b-2 border-red-200">
-                    <h2 class="text-blue-800 uppercase">PIONEER BOARD MEMBERS</h2>
-                    <hr class="border-b-2 border-red-800 w-8 font-bold">
-                    <p class="pt-3">
-                            The first chairman was Mr. Mario. Other board members were Mrs. Maina, Mrs. Njiri, and Mr. Thirima.
-                            <br><br>
-                            Growth between 2007–2010: The enrollment had grown to 150 children and 8 teachers.
-                            It was then the management saw a need for having a professional teacher as the head of the school.
-                            <br><br>
-                            In Term Two of 2010, the headteacher by the name Hirams was employed after a short stint of the school under church administration.
-                            <br><br>
-
-                            The school continued to grow until 1st Term of 2014 when the first head left due to other commitments. He left when the enrollment was 190 children and 13 teachers. In the second term of 2014, Mr. Stephen Akenga took over the school in an acting capacity.
-                            <br><br>
-
-                            In the third term of 2014, the headteacher by the name Martin Kaimenyi Mbogori was recruited. He has seen the school grow to the current enrollment of close to 800 students.
-                            The headteacher is supported and assisted by a dean of studies from every section, led by able deputy Madam Sharon Alai.
-                    </p>
-                </div>
-                <div class="hover:bg-red-200 p-4 pt-10 border-b-2 border-red-200">
-                    <h2 class="text-blue-800 uppercase">STAFF ESTABLISHMENT</h2>
-                    <hr class="border-b-2 border-red-800 w-8 font-bold">
-                    <p class="pt-3">
-                        <ul class="list-disc pl-5">
-                            <li>
-                                The school has seen tremendous growth from two staff during inception 13 years ago and now boasts over 50 workers.
-                            </li>
-                            <li>
-                                The school is run by a board of management comprising both reputable professionals.
-                            </li>
-                            <li>
-                                Being a Christian-based school, the pastoral care is overseen by the PCEA Church clergy team.
-                            </li>
-                         </ul>
-                    </p>
-                </div>
-
-                <div class="hover:bg-red-200 p-4 pt-10 border-b-2 border-red-200">
-                    <h2 class="text-blue-800 uppercase">Education System</h2>
-                    <hr class="border-b-2 border-red-800 w-8 font-bold">
-                    <p class="pt-3">
-                        Our school offers the CBC (Competency-Based Curriculum) system of education.
-                        The pre-school and daycare adopt a Montessori hybrid system of Montessori and CBC curriculum approach.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-      
-    <section class="lg:py-10">
-        <div class="flex justify-center items-center p-6">
-            <div class="bg-gray-100 px-4 py-6 rounded-lg shadow-lg w-full max-w-6xl">
-                <div class=" text-pink-800 text-center py-2 rounded-lg mb-6">
-                    <h2 class="text-2xl capitalize font-bold">ACADEMIC PERFORMANCE</h2>
-                    <hr class="mx-auto border-1 mt-2 border-pink-800">
-                </div>
-                <div class="hover:bg-red-200 p-4 pt8 border-b-2 border-red-200">
-                    <h2 class="text-blue-800 uppercase">ACADEMIC PERFORMANCE</h2>
-                    <hr class="border-b-2 border-red-800 w-8 font-bold">
-                    <p class="pt-3">
-                        The academic progress of the school has been simply fabulous right from baby class to class 8.
-
-                        The school participates in highly competitive exams like Embakasi private schools cluster, common Catholic exams (East Presbyter), and KNEC exams, to name but a few.
-
-                        To cite a few examples, our school was ranked position 3 out of 52 schools in the Embakasi private schools cluster exams, class 8, in 2016. Our child, Erick Omondi, was ranked position 6 out of the possible 1552 learners.
-
-                        In 2017, class 8’s common Catholic exam, our school was ranked position 2 out of the possible 18 schools. Our child, Naomi Jemkemoi, emerged in position one with 452 marks out of the possible 500 marks.
-
-                        The school presented 17 candidates for the pioneer KNEC certified exams in the year 2017. All the candidates produced a sterling performance, with the highest candidate achieving 442 marks out of 500. The school attained a mean score of 395 marks. Since then, the academic performance has been steady.
-                    </p>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-
-
-
-      
-    <section class="bg-blue-100 lg:py-10">
-        <div class="flex justify-center items-center p-6">
-            <div class="bg-gray-100 px-4 py-6 rounded-lg shadow-lg w-full max-w-6xl">
-                <div class=" text-pink-800 text-center py-2 rounded-lg mb-6">
-                    <h2 class="text-2xl capitalize font-bold">CO-CURRICULAR ACTIVITIES</h2>
-                    <hr class="mx-auto border-1 mt-2 border-pink-800">
-                </div>
-                <div class="hover:bg-red-200 p-4 pt8 border-b-2 border-red-200">
-                    <h2 class="text-blue-800 uppercase">CO-CURRICULAR ACTIVITIES</h2>
-                    <hr class="border-b-2 border-red-800 w-8 font-bold">
-                    <p class="pt-3">
-                        
-                        The school has not been left behind in nurturing talents.
-                        
-                        Currently, we have vibrant activities, including a Taekwondo club, music club, art club, ballet, chess, drama, Chinese language, volleyball, table tennis, football, and a journalism club, among others.
-                        
-                        The school participates in music and drama festivals, earning awards among our children.
-                        
-                        Due to our sterling performance in co-curricular activities, our school was invited by Royal Media Services to participate in their notable TV children’s program “Uhuru wa Wana”, which runs on Saturdays at 9 a.m. and repeats on Sundays from 3–4 p.m.
-                    </p>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-
-
     
-      
-    <section class=" lg:py-10">
-        <div class="flex justify-center items-center p-6">
-            <div class="bg-gray-100 px-4 py-6 rounded-lg shadow-lg w-full max-w-6xl">
-                <div class=" text-pink-800 text-center py-2 rounded-lg mb-6">
-                    <h2 class="text-2xl capitalize font-bold">VOTE OF THANKS</h2>
-                    <hr class="mx-auto border-1 mt-2 border-pink-800">
-                </div>
-                <div class="hover:bg-red-200 p-4 pt8 border-b-2 border-red-200">
-                    <h2 class="text-blue-800 uppercase">VOTE OF THANKS</h2>
-                    <hr class="border-b-2 border-red-800 w-8 font-bold">
-                    <p class="pt-2">
-                        
-                        It goes without saying that the church management has played a big role in the growth of the school.
-                        <br><br>
-                        In such a lot of appreciation, we recognize the notable work done by the respective boards, led by able chairpersons, among them Mr. Mario, Mr. Thirima, Mr. Njiri, Mrs. Mwaura, Mrs. Ann Chege, Robert Kariuki, and the current chair, Betty Ngiri, and the current chair advocate Stephen Ndirangu.
-                        Our sincere thanks also go to our able pastoral team for its unwavering support.
-                        <br><br>
-                        Last but not least, the church members for the trust they have in the school. Currently, we have close to a third of children whose parents are members of the PCEA Umoja Church.
-                        <br><br>
-                        Finally, Our Almighty God, for all things are possible with Him.
-                    </p>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-
-
-
+            <a href="academics.html"
+               class="bg-blue-700 text-white px-5 py-2 rounded-lg hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-300">
+              Enroll Today
+            </a>
+          </nav>
+    
+          <!-- Mobile Menu Button (block on <md, hidden on ≥md) -->
+          <button
+            id="mobile-menu-toggle"
+            class="block md:hidden text-gray-600 hover:text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-300 z-50"
+            aria-label="Toggle navigation menu"
+          >
   
+            <svg class="w-6 h-6 text-gray-700 text-2xl" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
+                <path d="M 3 9 A 1.0001 1.0001 0 1 0 3 11 L 47 11 A 1.0001 1.0001 0 1 0 47 9 L 3 9 z M 3 24 A 1.0001 1.0001 0 1 0 3 26 L 47 26 A 1.0001 1.0001 0 1 0 47 24 L 3 24 z M 3 39 A 1.0001 1.0001 0 1 0 3 41 L 47 41 A 1.0001 1.0001 0 1 0 47 39 L 3 39 z"></path>
+                </svg>
+          </button>
+        </div>
+    
+        <!-- Mobile Drawer (hidden on ≥md) -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200">
+          <ul class="space-y-1 px-4 py-3">
+            <li><a href="about.html" class="block py-2 text-gray-700 hover:bg-gray-100 rounded">Home</a></li>
+            <li><a href="index.html" class="block py-2 text-blue-800 font-bold hover:bg-gray-100 rounded" >About</a></li>
+            <li><a href="contact.html" class="block py-2 text-gray-700 hover:bg-gray-100 rounded">Contact</a></li>
+            <li><a href="academics.html" class="block py-2 text-gray-700 hover:bg-gray-100 rounded">Academics</a></li>
+    
+            <li class="border-t pt-2">
+              <p class="text-gray-600 uppercase tracking-wide">Gallery</p>
+              <ul class="pl-4 space-y-1">
+                <li><a href="gallery.html" class="block py-2 hover:bg-gray-100 rounded">Gallery</a></li>
+                <li><a href="staff.html" class="block py-2 hover:bg-gray-100 rounded">Staff</a></li>
+                <li><a href="trips.html" class="block py-2 hover:bg-gray-100 rounded">Trips</a></li>
+                <li><a href="games.html" class="block py-2 hover:bg-gray-100 rounded">Games</a></li>
+              </ul>
+            </li>
+    
+            <li class="border-t pt-2">
+              <p class="text-gray-600 uppercase tracking-wide">Resources</p>
+              <ul class="pl-4 space-y-1">
+                <li><a href="calendar.html" class="block py-2 hover:bg-gray-100 rounded">Academic Calendar</a></li>
+                <li><a href="events.html" class="block py-2 hover:bg-gray-100 rounded">Events</a></li>
+              </ul>
+            </li>
+    
+            <li class="pt-2">
+              <a href="academics.html"
+                 class="block text-center bg-blue-700 text-white py-2 rounded-lg hover:bg-blue-800">Enroll Today</a>
+            </li>
+          </ul>
+        </div>
+      </header>
 
+    <section class="relative h-[500px] overflow-hidden">
+        <!-- 1) Background image at the very back -->
+        <div
+          class="absolute inset-0 bg-cover bg-center z-0"
+          style="background-image: url('../statics/img/stuff/smem.jpg')"
+        ></div>
+      
+        <!-- 2) Simple bluish overlay, 40% opacity -->
+        <div
+          class="absolute inset-0 bg-blue-900/40 z-10"
+        ></div>
+      
+        <!-- 3) Content, explicitly above overlay -->
+        <div
+          class="relative z-20 flex flex-col items-center justify-center h-full px-6 text-center text-white"
+        >
+          <!-- Remove opacity-0 for debugging; add back once you confirm it’s visible -->
+          <h1 class="text-5xl md:text-6xl font-extrabold mb-4">
+            PCEA About
+          </h1>
+          <p class="bg-blue-700 px-4 py-2 border-b-2 rounded-lg border-red-800 shadow-2xl max-w-2xl text-lg md:text-xl mb-6">
+            Discover the mission, vision, and community life of PCEA Umoja.
+          </p>
+        </div>
+      </section>
+      
+
+
+
+    
+      <section class="py-12 lg:py-20">
+        <div class="max-w-7xl mx-auto px-6">
+          <!-- Header -->
+          <div
+            data-aos="fade-down"
+            class="text-center mb-10 p-4"
+          >
+            <h2 class="text-3xl font-extrabold text-blue-900">
+              Our Core Values
+            </h2>
+      <div class="w-24 h-1 bg-blue-600 mx-auto rounded"></div>
+
+            <p class="mt-2 text-lg text-blue-700">
+              The principles that guide our community every day.
+            </p>
+          </div>
+      
+          <!-- Values Grid -->
+          <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Repeat this <li> for each value -->
+            <li
+              data-aos="fade-up"
+              data-aos-delay="100"
+              class="flex items-start space-x-4 p-6 bg-white rounded-2xl shadow-lg"
+            >
+              <span class="flex-shrink-0">
+                <i class="fas fa-check-circle text-blue-500 text-2xl"></i>
+              </span>
+              <span class="text-lg font-medium text-blue-800">
+                Tolerance
+              </span>
+            </li>
+      
+            <li
+              data-aos="fade-up"
+              data-aos-delay="200"
+              class="flex items-start space-x-4 p-6 bg-white rounded-2xl shadow-lg"
+            >
+              <span class="flex-shrink-0">
+                <i class="fas fa-check-circle text-blue-500 text-2xl"></i>
+              </span>
+              <span class="text-lg font-medium text-blue-800">
+                Hard Work
+              </span>
+            </li>
+
+            <li
+            data-aos="fade-up"
+            data-aos-delay="200"
+            class="flex items-start space-x-4 p-6 bg-white rounded-2xl shadow-lg"
+          >
+            <span class="flex-shrink-0">
+              <i class="fas fa-check-circle text-blue-500 text-2xl"></i>
+            </span>
+            <span class="text-lg font-medium text-blue-800">
+              Respect
+            </span>
+          </li>
+
+          <li
+          data-aos="fade-up"
+          data-aos-delay="200"
+          class="flex items-start space-x-4 p-6 bg-white rounded-2xl shadow-lg"
+        >
+          <span class="flex-shrink-0">
+            <i class="fas fa-check-circle text-blue-500 text-2xl"></i>
+          </span>
+          <span class="text-lg font-medium text-blue-800">
+            Integrity
+          </span>
+        </li>
+
+        <li
+        data-aos="fade-up"
+        data-aos-delay="200"
+        class="flex items-start space-x-4 p-6 bg-white rounded-2xl shadow-lg"
+      >
+        <span class="flex-shrink-0">
+          <i class="fas fa-check-circle text-blue-500 text-2xl"></i>
+        </span>
+        <span class="text-lg font-medium text-blue-800">
+          Sacrifice
+        </span>
+      </li>
+      <li
+      data-aos="fade-up"
+      data-aos-delay="200"
+      class="flex items-start space-x-4 p-6 bg-white rounded-2xl shadow-lg"
+        >
+      <span class="flex-shrink-0">
+        <i class="fas fa-check-circle text-blue-500 text-2xl"></i>
+      </span>
+      <span class="text-lg font-medium text-blue-800">
+        Excellence
+      </span>
+        </li>
+
+        <li
+        data-aos="fade-up"
+        data-aos-delay="200"
+        class="flex items-start space-x-4 p-6 bg-white rounded-2xl shadow-lg"
+        >
+        <span class="flex-shrink-0">
+          <i class="fas fa-check-circle text-blue-500 text-2xl"></i>
+        </span>
+        <span class="text-lg font-medium text-blue-800">
+          Layalty
+        </span>
+        </li>
+
+        <li
+        data-aos="fade-up"
+        data-aos-delay="200"
+        class="flex items-start space-x-4 p-6 bg-white rounded-2xl shadow-lg"
+      >
+        <span class="flex-shrink-0">
+          <i class="fas fa-check-circle text-blue-500 text-2xl"></i>
+        </span>
+        <span class="text-lg font-medium text-blue-800">
+          Trust in God
+        </span>
+      </li>
+
+      <li
+      data-aos="fade-up"
+      data-aos-delay="200"
+      class="flex items-start space-x-4 p-6 bg-white rounded-2xl shadow-lg"
+    >
+      <span class="flex-shrink-0">
+        <i class="fas fa-check-circle text-blue-500 text-2xl"></i>
+      </span>
+      <span class="text-lg font-medium text-blue-800">
+        Diversity
+      </span>
+    </li>
+      
+            <!-- …continue for Respect, Integrity, Sacrifice, Excellence, Loyalty, Trust in God, Diversity -->
+          </ul>
+        </div>
+      </section>
+      
+
+
+
+
+
+<!-- 2. Section Markup -->
+<section class="py-16 bg-white">
+  <div class="max-w-6xl mx-auto px-6">
+    <!-- Title -->
+    <div
+      class="text-center mb-12"
+      data-aos="fade-down"
+      data-aos-delay="200"
+    >
+      <h2 class="text-2xl font-extrabold text-blue-900 uppercase tracking-wide mb-2">
+        Our Mission, Vision & Motto
+      </h2>
+      <div class="w-24 h-1 bg-blue-400 mx-auto rounded"></div>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Mission Card -->
+      <div
+        id="mission"
+        class="flex flex-col items-center text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition"
+        data-aos="fade-right"
+        data-aos-delay="0"
+      >
+        <div
+          class="w-16 h-16 mb-4 flex items-center justify-center rounded-full bg-blue-100"
+        >
+          <i class="fas fa-book text-2xl text-red-600"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-blue-900 mb-2">Mission</h3>
+        <p class="text-gray-700">
+          PCEA Umoja Academy is a religous based academic ceneter that fosters for academic excellence while embracing Christian values.
+        </p>
+      </div>
+
+      <!-- Vision Card -->
+      <div
+        class="flex flex-col items-center text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition"
+        data-aos="fade-up"
+        data-aos-delay="1000"
+      >
+        <div
+          class="w-16 h-16 mb-4 flex items-center justify-center rounded-full bg-blue-100"
+        >
+          <i class="fas fa-rocket text-2xl text-red-600"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-blue-900 mb-2">Vision</h3>
+        <p class="text-gray-700">
+          We strive to prepare learners to become lifelong persons and responsible citizens ready to participate in and contribute to the global world now and future.
+        </p>
+      </div>
+
+      <!-- Motto Card -->
+      <div
+        class="flex flex-col items-center text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition"
+        data-aos="fade-left"
+        data-aos-delay="2000"
+      >
+        <div
+          class="w-16 h-16 mb-4 flex items-center justify-center rounded-full bg-blue-100"
+        >
+          <i class="fas fa-fire text-2xl text-red-600"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-blue-900 mb-2">Motto</h3>
+        <p class="text-gray-700">
+            Nurturing based on Christian tenets.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+   
+
+
+<section class="py-12 lg:py-20">
+  <div class="max-w-7xl mx-auto px-6">
+    <!-- Header -->
+    <div data-aos="fade-down" class="text-center mb-10">
+      <h2 class="text-3xl font-extrabold text-blue-900 uppercase">
+        PCEA Academy Brief History
+      </h2>
+      <div class="w-24 h-1 bg-blue-600 mx-auto  rounded"></div>
+      <p class="mt-2 text-lg text-blue-700">
+        A concise journey through our founding and growth milestones.
+      </p>
+    </div>
+
+    <!-- History Grid -->
+    <ul class="grid grid-cols-1  gap-8">
+      <!-- Preamble -->
+      <li data-aos="fade-up" data-aos-delay="100" class="bg-white p-6 rounded-2xl shadow-lg">
+        <h3 class="text-blue-800 uppercase font-semibold mb-2">Preamble</h3>
+        <p class="text-blue-700">
+          PCEA Umoja Academy-Nairobi, just like many organizations, started in a very humble beginning. The idea was born from the Women's Guild and Christian Education departments of the church.
+        </p>
+      </li>
+
+      <!-- Beginning -->
+      <li data-aos="fade-up" data-aos-delay="200" class="bg-white p-6 rounded-2xl shadow-lg">
+        <h3 class="text-blue-800 uppercase font-semibold mb-2">beginning</h3>
+        <p class="text-blue-700">
+          The academy opened its doors in January 2007 with two children, Abigael Muthoni and Fredrick Ayuku, and one teacher, Priscilla Mugo, assisted by Jane Wanjiku in charge of welfare. Both are still with the academy to date. In Term Two of 2007, the enrolment increased to 43.
+        </p>
+      </li>
+
+      <!-- Pioneer Board Members -->
+      <li data-aos="fade-up" data-aos-delay="300" class="bg-white p-6 rounded-2xl shadow-lg">
+        <h3 class="text-blue-800 uppercase font-semibold mb-2">PIONEER BOARD MEMBERS</h3>
+        <p class="text-blue-700">
+          The first chairman was Mr. Mario. Other board members were Mrs. Maina, Mrs. Njiri, and Mr. Thirima.<br><br>
+          Growth between 2007–2010: The enrollment had grown to 150 children and 8 teachers. It was then the management saw a need for having a professional teacher as the head of the school.<br><br>
+          In Term Two of 2010, the headteacher by the name Hirams was employed after a short stint of the school under church administration.<br><br>
+          The school continued to grow until 1st Term of 2014 when the first head left due to other commitments. He left when the enrollment was 190 children and 13 teachers. In the second term of 2014, Mr. Stephen Akenga took over the school in an acting capacity.<br><br>
+          In the third term of 2014, the headteacher by the name Martin Kaimenyi Mbogori was recruited. He has seen the school grow to the current enrollment of close to 800 students. The headteacher is supported and assisted by a dean of studies from every section, led by able deputy Madam Sharon Alai.
+        </p>
+      </li>
+
+      <!-- Staff Establishment -->
+      <li data-aos="fade-up" data-aos-delay="400" class="bg-white p-6 rounded-2xl shadow-lg">
+        <h3 class="text-blue-800 uppercase font-semibold mb-2">STAFF ESTABLISHMENT</h3>
+        <ul class="list-disc pl-5 text-blue-700">
+          <li>The school has seen tremendous growth from two staff during inception 13 years ago and now boasts over 50 workers.</li>
+          <li>The school is run by a board of management comprising both reputable professionals.</li>
+          <li>Being a Christian-based school, the pastoral care is overseen by the PCEA Church clergy team.</li>
+        </ul>
+      </li>
+
+      <!-- Education System -->
+      <li data-aos="fade-up" data-aos-delay="500" class="bg-white p-6 rounded-2xl shadow-lg">
+        <h3 class="text-blue-800 uppercase font-semibold mb-2">Education System</h3>
+        <p class="text-blue-700">
+          Our school offers the CBC (Competency-Based Curriculum) system of education. The pre-school and daycare adopt a Montessori hybrid system of Montessori and CBC curriculum approach.
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+
+
+
+
+
+      
+
+<section class="bg-white py-12 lg:py-20">
+  <div class="max-w-7xl mx-auto px-6">
+    <!-- Header -->
+    <div data-aos="fade-down" class="text-center mb-10">
+      <h2 class="text-3xl font-extrabold text-blue-900 uppercase">
+        Academic Performance
+      </h2>
+      <div class="w-24 h-1 bg-blue-600 mx-auto rounded mt-2"></div>
+
+      <p class="mt-2 text-lg text-gray-600 leading-relaxed">
+        Celebrating our students’ outstanding achievements over the years.
+      </p>
+    </div>
+
+    <!-- Performance Card -->
+    <div class="grid grid-cols-1 md:grid-cols-1 gap-8">
+      <div data-aos="fade-up" data-aos-delay="100" class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
+        <h3 class="text-blue-800 uppercase font-semibold mb-4">
+          Academic Performance
+        </h3>
+        <p class="text-gray-600 p-2 space-y-4">
+          The academic progress of the school has been simply fabulous right from baby class to class 8.
+        </p>
+        <p class="text-gray-600 p-2 space-y-4">
+          The school participates in highly competitive exams like Embakasi private schools cluster, common Catholic exams (East Presbyter), and KNEC exams, to name but a few.
+        </p>
+        <p class="text-gray-600 p-2 space-y-4">
+          To cite a few examples, our school was ranked position 3 out of 52 schools in the Embakasi private schools cluster exams, class 8, in 2016. Our child, Erick Omondi, was ranked position 6 out of the possible 1552 learners.
+        </p>
+        <p class="text-gray-600 p-2 space-y-4">
+          In 2017, class 8’s common Catholic exam, our school was ranked position 2 out of the possible 18 schools. Our child, Naomi Jemkemoi, emerged in position one with 452 marks out of the possible 500 marks.
+        </p>
+        <p class="text-gray-600 p-2 space-y-4">
+          The school presented 17 candidates for the pioneer KNEC certified exams in the year 2017. All the candidates produced a sterling performance, with the highest candidate achieving 442 marks out of 500. The school attained a mean score of 395 marks. Since then, the academic performance has been steady.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+      
+
+<section class=" py-12 lg:py-20">
+  <div class="max-w-7xl mx-auto px-6">
+    <!-- Header -->
+    <div data-aos="fade-down" class="text-center mb-10">
+      <h2 class="text-3xl font-extrabold text-blue-900 capitalize">
+        CO-CURRICULAR ACTIVITIES
+      </h2>
+      <p class="mt-2 text-lg text-blue-700">
+        
+      </p>
+      <div class="w-24 h-1 bg-blue-600 mx-auto rounded mt-2"></div>
+    </div>
+
+    <!-- Activities Card -->
+    <div data-aos="fade-up" data-aos-delay="100" class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
+      <h3 class="text-blue-800 uppercase font-semibold mb-4">
+        CO-CURRICULAR ACTIVITIES
+      </h3>
+      <p class="text-gray-700 py-2 space-y-4">
+        The school has not been left behind in nurturing talents.
+      </p>
+      <p class="text-gray-700 py-2 space-y-4">
+        Currently, we have vibrant activities, including a Taekwondo club, music club, art club, ballet, chess, drama, Chinese language, volleyball, table tennis, football, and a journalism club, among others.
+      </p>
+      <p class="text-gray-700 py-2 space-y-4">
+        The school participates in music and drama festivals, earning awards among our children.
+      </p>
+      <p class="text-gray-700 py-2 space-y-4">
+        Due to our sterling performance in co-curricular activities, our school was invited by Royal Media Services to participate in their notable TV children’s program “Uhuru wa Wana”, which runs on Saturdays at 9 a.m. and repeats on Sundays from 3–4 p.m.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+    
+      
+
+<section class="bg-white py-12 lg:py-20">
+  <div class="max-w-7xl mx-auto px-6">
+    <!-- Header -->
+    <div data-aos="fade-down" class="text-center mb-10">
+      <h2 class="text-3xl font-extrabold text-blue-900 uppercase">
+        Vote of Thanks
+      </h2>
+      <p class="mt-2 text-lg text-blue-700">
+      </p>
+      <div class="w-24 h-1 bg-blue-600 mx-auto rounded mt-2"></div>
+    </div>
+
+    <!-- Vote of Thanks Card -->
+    <div data-aos="fade-up" data-aos-delay="100" class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition">
+      <h3 class="text-blue-800 uppercase font-semibold mb-2">
+        VOTE OF THANKS
+      </h3>
+      <div class="w-10 h-1 bg-blue-600  rounded mt-2"></div>
+
+      <p class="text-gray-700 py-2 space-y-4">
+        It goes without saying that the church management has played a big role in the growth of the school.
+      </p>
+      <p class="text-gray-700 py-2 space-y-4">
+        In such a lot of appreciation, we recognize the notable work done by the respective boards, led by able chairpersons, among them Mr. Mario, Mr. Thirima, Mr. Njiri, Mrs. Mwaura, Mrs. Ann Chege, Robert Kariuki, and the current chair, Betty Ngiri, and the current chair advocate Stephen Ndirangu. Our sincere thanks also go to our able pastoral team for its unwavering support.
+      </p>
+      <p class="text-gray-700 py-2 space-y-4">
+        Last but not least, the church members for the trust they have in the school. Currently, we have close to a third of children whose parents are members of the PCEA Umoja Church.
+      </p>
+      <p class="text-gray-700 py-2 space-y-4">
+        Finally, Our Almighty God, for all things are possible with Him.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+      
     <footer class="bg-blue-900 text-gray-300 py-8">
-        <div class="container mx-auto grid grid-cols-1 md:grid-cols-5 gap-8 px-4">
-          
-          <!-- Left Column (Logo and Info) -->
-          <div class="col-span-1 md:col-span-2">
-            <h2 class="text-xl font-bold mb-4">PCEA Schools</h2>
-            <p class="mb-4">You are welcomed the follwoing days in our institutions for administrative purposes: Monday to Friday: 0730 to 1700</p>
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-8 px-6 lg:px-8">
+      
+          <!-- Logo & Info -->
+          <div class="md:col-span-2">
+            <h2 class="text-xl font-bold mb-4 text-white">PCEA Umoja Academy-Nairobi</h2>
+            <p class="mb-4">Office hours: Monday–Friday, 07:30–17:00</p>
             <div class="flex space-x-3">
-              <a href="https://www.facebook.com/PCEAUMOJA1" class="p-2 bg-white rounded-full text-red-800 hover:bg-gray-200">
+              <a href="https://www.facebook.com/PCEAUMOJA1" target="_blank" class="p-2 bg-white rounded-full text-red-800 hover:bg-gray-200 transition">
                 <i class="fab fa-facebook-f"></i>
               </a>
-              <a href="https://www.instagram.com/p.c.e.a2024/" class="p-2 bg-white rounded-full text-red-800 hover:bg-gray-200">
+              <a href="https://www.instagram.com/p.c.e.a2024/" target="_blank" class="p-2 bg-white rounded-full text-red-800 hover:bg-gray-200 transition">
                 <i class="fab fa-instagram"></i>
               </a>
-              <!-- <a href="#" class="p-2 bg-white rounded-full text-red-800 hover:bg-gray-200">
-                <i class="fab fa-google"></i>
-              </a> -->
-              <!-- <a href="#" class="p-2 bg-white rounded-full text-red-800 hover:bg-gray-200">
-                <i class="fab fa-linkedin"></i>
-              </a> -->
-              <a href="https://www.youtube.com/@pceaumojaacademy3245" class="p-2 bg-white rounded-full text-red-800 hover:bg-gray-200">
+              <a href="https://www.youtube.com/@pceaumojaacademy3245" target="_blank" class="p-2 bg-white rounded-full text-red-800 hover:bg-gray-200 transition">
                 <i class="fab fa-youtube"></i>
               </a>
             </div>
           </div>
-    
-          <!-- Middle Column (Featured Links) -->
-          <div class="col-span-1">
-            <h3 class="text-lg font-semibold mb-4">Featured Links</h3>
+      
+          <!-- Featured Links -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4 text-white">Featured Links</h3>
             <ul class="space-y-2">
               <li><a href="./academics.html" class="hover:underline">Academics</a></li>
               <li><a href="./about.html" class="hover:underline">About</a></li>
-              <li><a href="./gallary.html" class="hover:underline">Gallary</a></li>
+              <li><a href="./gallery.html" class="hover:underline">Gallery</a></li>
               <li><a href="./events.html" class="hover:underline">Events</a></li>
               <li><a href="./index.html" class="hover:underline">Home</a></li>
             </ul>
           </div>
-    
-          <!-- Right Columns (Contact Info) -->
-          <div class="col-span-1 text-gray-300">
-            <h3 class="text-lg font-semibold mb-4">Contacts & Address</h3>
-            <p class="mb-2 uppercase"><i class="fas fa-map-marker-alt"></i> P.o box 54053, 00200 Nairobi Kenya</p>
-            <p class="mb-2"><i class="fas fa-phone"></i> +254 0705 388-810, +254 722 215838</p>
-            <p><i class="fas fa-envelope"></i> academypceaumoja@gmail.com</p>
+      
+          <!-- Contacts & Address -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4 text-white">Contacts & Address</h3>
+            <p class="mb-2 uppercase"><i class="fas fa-map-marker-alt mr-2"></i>P.O. Box 54053, 00200 Nairobi, Kenya</p>
+            <p class="mb-2"><i class="fas fa-phone mr-2"></i>+254 705 388810, +254 722 215838</p>
+            <p><i class="fas fa-envelope mr-2"></i>academypceaumoja@gmail.com</p>
           </div>
-    
-          <div class="col-span-1">
-            <!-- <h3 class="text-lg font-semibold mb-4">Gaba Campus (Eldoret)</h3> -->
-            <!-- <p id="" class="mb-2"><i class="fa-solid fa-eye-low-vision"></i></p> -->
-<!-- 
-            <p class="mb-2"><i class="fas fa-burn"></i> Mission</p>
-            <p class="mb-2"><i class="fas fa-calendar-check"></i> Vission</p>
-            <p class="mb-2"><i class="fas fa-edit"></i> Motto</p>
-          </div> -->
-
-          <div class="space-y-5">
+      
+          <!-- Motto, Vision & Mission -->
+          <div class="space-y-6">
             <!-- Mission -->
             <div class="group relative">
-                <p class="mb-2 text-gray-200 font-medium flex items-center cursor-pointer">
-                    <i class="fas fa-burn mr-2 text-teal-100"></i>
-                    Mission
-                </p>
-                <div id="mission" 
-                    class="bg-pink-800  hidden group-hover:flex h-max w-48 text-white p-4 rounded-lg items-center absolute top-0 right-0 shadow-lg">
-                    <div class="text-center">
-                        We strive to prepare learners to become lifelong persons and responsible citizens ready to participate in and contribute to the global world now and future.
-                    </div>
-                </div>
+              <p class="flex items-center text-gray-200 font-medium cursor-pointer">
+                <i class="fas fa-burn mr-2 text-teal-100"></i>Mission
+              </p>
+              <div class="absolute top-0 right-0 mt-1 w-56 bg-pink-800 text-white p-4 rounded-lg shadow-lg opacity-0 transform scale-95 transition duration-300 group-hover:opacity-100 group-hover:scale-100 origin-top-right">
+                <p class="text-center">We strive to prepare learners to become lifelong learners and responsible citizens ready to participate in and contribute to the global world now and in the future.</p>
+              </div>
             </div>
-    
             <!-- Vision -->
             <div class="group relative">
-                <p class="mb-2 text-gray-200 font-medium flex items-center cursor-pointer">
-                    <i class="fas fa-calendar-check text-teal-100 mr-2"></i>
-                    Vision
-                </p>
-                <div id="vission" 
-                    class="bg-pink-800  hidden group-hover:flex h-max w-48 text-white p-4 rounded-lg items-center absolute top-0 right-0 shadow-lg">
-                    <div class="text-center">
-                        To become a leading and most preferred academy in the provision of quality, excellence, and holistic education in Kenya.
-                    </div>
-                </div>
+              <p class="flex items-center text-gray-200 font-medium cursor-pointer">
+                <i class="fas fa-calendar-check mr-2 text-teal-100"></i>Vision
+              </p>
+              <div class="absolute top-0 right-0 mt-1 w-56 bg-pink-800 text-white p-4 rounded-lg shadow-lg opacity-0 transform scale-95 transition duration-300 group-hover:opacity-100 group-hover:scale-100 origin-top-right">
+                <p class="text-center">To become a leading and most preferred academy in providing quality, excellence, and holistic education in Kenya.</p>
+              </div>
             </div>
-    
             <!-- Motto -->
             <div class="group relative">
-                <p class="mb-2 text-gray-200 font-medium flex items-center cursor-pointer">
-                    <i class="fas fa-edit text-teal-100 mr-2"></i>
-                    Motto
-                </p>
-                <div id="motto" 
-                    class="bg-pink-800  hidden group-hover:flex h-max w-48 text-gray-100 p-4 rounded-lg items-center absolute top-0 right-0 shadow-lg">
-                    <div class="text-center">
-                        Nurturing based on Christian tenets.
-                    </div>
-                </div>
-                </div>
+              <p class="flex items-center text-gray-200 font-medium cursor-pointer">
+                <i class="fas fa-edit mr-2 text-teal-100"></i>Motto
+              </p>
+              <div class="absolute top-0 right-0 mt-1 w-56 bg-pink-800 text-white p-4 rounded-lg shadow-lg opacity-0 transform scale-95 transition duration-300 group-hover:opacity-100 group-hover:scale-100 origin-top-right">
+                <p class="text-center">Nurturing based on Christian tenets.</p>
+              </div>
             </div>
+          </div>
         </div>
+      
+        <div class="mt-8">
+          <p class="text-center bg-blue-950 text-pink-500 py-2">© 2025 PCEA Umoja Academy-Nairobi. All rights reserved.</p>
         </div>
-
-        
-
       </footer>
-      <div>
-        <p class="text-center bg-blue-950 text-pink-500">PCEA Umoja Academy-Nairobi. All rights reserved.</p>
-    </div>
+      
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+    AOS.init({
+        duration: 800,       // animation length in ms
+        easing: 'ease-in-out',
+        once: true,          // animate only first time
+        offset: 100,         // trigger point (px)
+    });
+
+    
+    const btn = document.getElementById('mobile-menu-toggle');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+    
+    </script>
+
 
 
 

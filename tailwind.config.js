@@ -24,4 +24,13 @@ module.exports = {
   plugins: [
     require('flowbite/plugin')
   ],
+
+  variants: {
+    extend: {
+      opacity: ['group-hover'],
+      pointerEvents: ['group-hover'],
+    },
+  },
 }
+
+

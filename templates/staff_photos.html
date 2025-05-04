@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../statics/css/output/tw_output.css">
+  <link rel="icon" href="../statics/img/PCEAschool.png" type="image/icon type">
+  <title>Gallery(Service) - PCEA Schools</title>
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-800 via-red-200 to-blue-800">
+
+  <div class="fixed bottom-4 ml-3 bg-blue-800 text-white p-4 rounded-full shadow-lg hover:bg-blue-600 transition-all">
+    <a href="gallary.html" class="hover:underline">Back to Galarry</a>
+    <a href="service.html" class="hover:underline font-bold px-4">Service</a>
+    <a href="staff_photos.html" class="hover:underline font-extrabold">Staff</a>
+    <a href="trip.html" class="hover:underline font-bold">Trips</a>
+  </div>
+
+  <section class="mx-auto justify-items-center">
+    <div id="gallery" class="flex container my-12 flex-wrap md:grid md:grid-cols-3 lg:grid-cols-4 justify-items-center items-center p-4">
+      <!-- Lightbox Container -->
+      <div id="lightbox" class="hidden fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4 cursor-pointer">
+        <img id="lightbox-image" class="max-w-full max-h-full rounded-lg" src="">
+        <button onclick="closeLightbox()" class="absolute top-4 right-4 text-white text-4xl">&times;</button>
+      </div>
+      <!-- Thumbnails will be injected here -->
+    </div>
+  </section>
+
+  <script>
+    // Fetch image manifest and render gallery
+    fetch('../statics/img/stuff/images.json')
+      .then(response => response.json())
+      .then(images => {
+        const container = document.getElementById('gallery');
+        images.forEach(filename => {
+          const thumbUrl = `../statics/img/stuff/thumbnails/${filename}`;
+          const fullUrl  = `../statics/img/stuff/${filename}`;
+
+          const wrapper = document.createElement('div');
+          wrapper.className = 'p-2 flex flex-col items-center';
+
+          const img = document.createElement('img');
+          img.className = 'w-72 h-48 object-cover rounded-lg cursor-zoom-in';
+          img.src = thumbUrl;
+          img.dataset.src = fullUrl;
+          img.alt = filename;
+          img.loading = 'lazy';
+          img.fetchpriority = 'low';
+          img.onclick = () => openLightbox(fullUrl);
+
+          wrapper.appendChild(img);
+          container.appendChild(wrapper);
+        });
+        initLazyLoad();
+      })
+      .catch(err => console.error('Error loading image list:', err));
+
+    // Lightbox functions
+    function openLightbox(src) {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImage = document.getElementById('lightbox-image');
+      lightboxImage.src = src;
+      lightbox.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      const lightbox = document.getElementById('lightbox');
+      lightbox.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+    document.getElementById('lightbox').addEventListener('click', e => {
+      if (e.target.id === 'lightbox') closeLightbox();
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && !document.getElementById('lightbox').classList.contains('hidden')) {
+        closeLightbox();
+      }
+    });
+
+    // Lazy-load full images
+    function initLazyLoad() {
+      const imgs = document.querySelectorAll('img[data-src]');
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src;
+            obs.unobserve(img);
+          }
+        });
+      });
+      imgs.forEach(img => observer.observe(img));
+    }
+  </script>
+</body>
+</html>
