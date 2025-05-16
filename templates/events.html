@@ -7,6 +7,35 @@
     <link rel="icon" href="../statics/img/PCEAschool.png" type="image/icon type">
 
     <title>Events - PCEA Schools</title>
+
+    <!-- FullCalendar -->
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script> -->
+
+    <!-- ical.js -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/ical.js/build/ical.min.js"></script> -->
+
+
+      <!-- Custom Tailwind config for fonts and colors
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              fontFamily: {
+                sans: ['Inter', 'sans-serif']
+              },
+              colors: {
+                primary: '#2563eb',
+                accent: '#f97316',
+              }
+            }
+          }
+        }
+      </script> -->
+
+      <!-- Google Font -->
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+
  
 
 
@@ -350,9 +379,23 @@
   <div class="max-w-7xl grid justify-center mx-auto px-6 lg:px-8">
     <h2 class="text-center text-2xl font-bold py-6 ">School Calendar</h2>
 
-          <iframe class="hidden md:grid md:px-2" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Africa%2FNairobi&showTz=0&showTitle=0&showTabs=0&showPrint=0&src=MDIxOTI1OGM4OTZmOTZjZjY1Y2U1YWI5YjdjMGQ4OWU4Mjg3YjhkNTU4NDI5YjJmODZjNGU0NzYzMjBhYjcxNkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23009688" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+      <!-- Header -->
+      <div class="bg-white shadow-md p-4 md:p-6 mb-4">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+          <h1 class="text-2xl md:text-3xl font-semibold text-gray-800">📅 PCEA Umoja - 2025 Calendar (TERM TWO)</h1>
+          <a href="../statics/files/PCEA_Umoja_Term2_2025.ics" download class="mt-2 md:mt-0 text-white bg-blue-900 px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+            ⬇ Download .ics File
+          </a>
+        </div>
+      </div>
 
-          <iframe class="md:hidden md:px-2" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Africa%2FNairobi&showTz=0&showTitle=0&showTabs=0&showPrint=0&src=MDIxOTI1OGM4OTZmOTZjZjY1Y2U1YWI5YjdjMGQ4OWU4Mjg3YjhkNTU4NDI5YjJmODZjNGU0NzYzMjBhYjcxNkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23009688" style="border-width:0" width="350" height="300" frameborder="0" scrolling="no"></iframe>
+      <!-- Calendar Container -->
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white p-4 rounded-2xl shadow-lg">
+          <div id="calendar" class="text-sm sm:text-base"></div>
+        </div>
+      </div>
+
 
   </div>
 </section>
@@ -443,6 +486,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
     <script src="../statics/js/flowbite.min.js"></script>
     <script src="../statics/js/htmx.min.js"></script>
+      <!-- FullCalendar JS -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+
+    <!-- ical.js -->
+    <script src="https://cdn.jsdelivr.net/npm/ical.js/build/ical.min.js"></script>
+
     <script>
         const btn = document.getElementById('mobile-menu-toggle');
         const menu = document.getElementById('mobile-menu');
@@ -459,6 +508,44 @@
             btn.classList.add('text-white');
           });
         });
-    </script>
+        async function loadICSAndRender() {
+          const response = await fetch('../statics/files/PCEA_Umoja_Term2_2025.ics');
+          const icsText = await response.text();
+          const jcalData = ICAL.parse(icsText);
+          const comp = new ICAL.Component(jcalData);
+          const events = comp.getAllSubcomponents("vevent");
+
+          const calendarEvents = events.map(event => {
+            const e = new ICAL.Event(event);
+            return {
+              title: e.summary,
+              start: e.startDate.toString(),
+              allDay: true
+            };
+          });
+
+          const calendarEl = document.getElementById('calendar');
+          const calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+            headerToolbar: {
+              left: 'prev,next today',
+              center: 'title',
+              right: 'dayGridMonth,timeGridWeek'
+            },
+            themeSystem: 'standard',
+            height: 'auto',
+            events: calendarEvents,
+            eventColor: '#2563eb',
+            eventTextColor: '#fff',
+            editable: false,
+            displayEventTime: false,
+            aspectRatio: 1.5
+          });
+
+          calendar.render();
+        }
+
+        document.addEventListener('DOMContentLoaded', loadICSAndRender);
+      </script>
 </body>
 </html>

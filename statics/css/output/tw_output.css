@@ -2551,6 +2551,11 @@ input:checked + .toggle-bg {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
+.hover\:bg-blue-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(26 86 219 / var(--tw-bg-opacity, 1));
+}
+
 .hover\:text-blue-600:hover {
   --tw-text-opacity: 1;
   color: rgb(28 100 242 / var(--tw-text-opacity, 1));
@@ -2808,6 +2813,11 @@ input:checked + .toggle-bg {
     padding-bottom: 8rem;
   }
 
+  .sm\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
   .sm\:text-7xl {
     font-size: 4.5rem;
     line-height: 1;
@@ -2816,6 +2826,11 @@ input:checked + .toggle-bg {
   .sm\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .sm\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -2943,6 +2958,10 @@ input:checked + .toggle-bg {
     padding: 3rem;
   }
 
+  .md\:p-6 {
+    padding: 1.5rem;
+  }
+
   .md\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -2975,6 +2994,11 @@ input:checked + .toggle-bg {
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .md\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
   .md\:opacity-60 {
